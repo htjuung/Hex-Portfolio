@@ -19,6 +19,12 @@ This project is a practice of slicing and responsive web design (RWD) based on t
 - JavaScript
 - RWD (media queries, flexbox, etc.)
 
+## Planned Improvements
+
+- Complete the design and implementation of other pages
+- Optimize RWD for a better cross-device experience
+- Add interactive features
+
 ## Getting Started
 
 1. Clone this repository:
@@ -33,9 +39,5 @@ This project is a practice of slicing and responsive web design (RWD) based on t
 
 3. Open `index.html` to view the portfolio page.
 
-## Planned Improvements
 
-- Complete the design and implementation of other pages
-- Optimize RWD for a better cross-device experience
-- Add interactive features
 
