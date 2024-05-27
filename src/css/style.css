@@ -1,7 +1,14 @@
 body {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
+  font-size: 20px;
   max-width: 1920px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .header {
@@ -20,20 +27,20 @@ body {
 }
 
 .menu {
- display: flex;
- height: 32px;
- gap: 40px;
- align-items: center;
+  display: flex;
+  height: 32px;
+  align-items: center;
 }
 
-.menu>li:hover {
-
-}
-
-.menu>li>a {
+.menu a {
   Padding: 4px 8px 4px 8px;
   color: black;
   text-decoration: none;
+  padding-right: 40px;
+}
+
+.hamburger {
+  display: none;
 }
 
 .intro {
@@ -73,6 +80,23 @@ body {
   bottom: 0;
 }
 
+.highlited {
+  background: no-repeat url(/image/mark.png);
+  background-position: bottom;
+  background-size: contain;
+}
+
+
+.intro-content-title::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: auto;
+  margin-top: 4px;
+}
+
 .intro-content {
   display: flex;
   text-align: center;
@@ -83,7 +107,8 @@ body {
   max-width: 298px;
 }
 
-.intro-content1, .intro-content2{
+.intro-content1,
+.intro-content2 {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -115,10 +140,10 @@ body {
   max-width: 636px;
 }
 
-.card>img {
+.card img {
   border-radius: 8px;
   border: 1px solid #F1F1F1;
-  height: 400px;
+  max-width: 100%;
 }
 
 .card-title {
@@ -155,28 +180,172 @@ body {
   padding: 5% 0 6% 0;
   justify-content: center;
   gap: 1%;
+  height: 110px;
+  align-items: center;
 }
 
-.pagination>li {
+.pagination li {
   padding: 2px 13px 2px 13px;
 }
 
-.pagination>li>a {
+.pagination a {
   color: black;
   text-decoration: none;
   font-size: 24px;
 }
 
 .footer {
-  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-lg.png);
+  background-image: url(/image/footer-bg-lg.png);
   max-width: 1920px;
-  height: 424px;
   display: flex;
   justify-content: space-around;
-    align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.contact2>li>a {
+.contact1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.contact1 img {
+  width: 120px;
+}
+
+.email {
+  color: #919191;
+}
+
+.contact2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 0 40px 0;
+}
+
+.contact2 li {
+  padding: 8px 24px 8px 24px;
+  border-radius: 8px;
+  border: solid 1px #C1C1C1;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 306px;
+}
+
+.contact2 a {
   display: flex;
   align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.contact2>li>a>img {
+  padding-right: 8px;
+}
+
+.list {
+  background: black;
+}
+
+.list a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  .btn {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: white;
+    border: 0;
+    border-radius: 8px;
+    left: 0;
+  }
+
+  .btn:hover {
+    background-color: #808080;
+  }
+
+  .active,
+  .btn.active:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .header p {
+    margin: 8px;
+  }
+
+  .hamburger {
+    position: relative;
+    display: block;
+  }
+
+  .header ul {
+    position: absolute;
+    top: 44px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px #808080 solid;
+
+  }
+
+  .header li {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px #808080 solid;
+  }
+
+  .header li:hover {
+    background-color: #808080;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .closure {
+    display: none;
+  }
+
+
+  .menu {
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-end
+  }
+
+  .quote-right {
+    display: none;
+  }
+
+  .quote-left {
+    left: 40%;
+    top: -5%;
+  }
+
+  .intro-content {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 40px 0 40px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact1 {
+    align-items: center
+  }
+
 }
